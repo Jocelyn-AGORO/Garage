@@ -1,5 +1,7 @@
 package garages;
 
+import java.util.Objects;
+
 public class Garage {
 
 	private String name;
@@ -25,4 +27,16 @@ public class Garage {
 		return "Garage " + name;
 	}
 
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		Garage garage = (Garage) o;
+		return name.equals(garage.name);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(name);
+	}
 }

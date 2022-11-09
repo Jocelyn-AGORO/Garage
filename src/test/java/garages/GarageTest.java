@@ -64,7 +64,7 @@ public class GarageTest {
 			v1.sortDuGarage(); // Que doit-il se passer ?
 			// Then: on doit avoir une exception
 			// Si on arrive ici, il n'y a pas eu d'exception, échec
-			fail();
+			fail("Une voiture ne peut pas sortir d'un garage deux fois à la suite");
 		} catch (Exception e) {
 
 			// Si on arrive ici, il y a eu une exception, c'est ce qui est attendu
